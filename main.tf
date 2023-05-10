@@ -34,7 +34,4 @@ resource "openstack_compute_instance_v2" "vpn-2" {
 	image_id        = "vmi-debian-11.0-amd64-100gb" # ubuntu
 	flavor_id       = "ab7b9b6d-108c-4487-90a4-2da604ad6a92"
 	security_groups = ["default"]
-	network {
-		name = "hoge-net"
-	}
 }
