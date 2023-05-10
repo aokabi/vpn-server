@@ -35,6 +35,6 @@ resource "openstack_compute_instance_v2" "vpn-2" {
 	flavor_id       = "ab7b9b6d-108c-4487-90a4-2da604ad6a92"
 	security_groups = ["default"]
 	metadata = {
-		"instance_name_tag" = "vpn-2"
+		"instance_name_tag" = "vpn-3"
 	}
 }
