@@ -13,7 +13,6 @@ required_version = ">= 0.14.0"
 provider "openstack" {
 	user_name   = "gncu39420955"
 	tenant_name = "gnct39420955"
-	password    = "${var.password}" # configured at terraform cloud
 	auth_url    = "https://identity.tyo1.conoha.io/v2.0"
 }
 
