@@ -49,7 +49,7 @@ resource "openstack_networking_network_v2" "network_vpn_2" {
 }
 
 resource "openstack_networking_port_v2" "port_vpn_2" {
-	name       = "port_vpn_2"
+	name       = "local-gnct39420955"
 	network_id = "${openstack_networking_network_v2.network_vpn_2.id}"
   admin_state_up = "true"
 	security_group_ids = [
