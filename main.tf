@@ -43,7 +43,7 @@ resource "openstack_compute_instance_v2" "vpn-2" {
 }
 
 resource "openstack_networking_network_v2" "network_vpn_2" {
-  name           = "network_vpn_2"
+  name           = "local-gnct39420955-2"
   admin_state_up = "true"
 }
 
