@@ -37,6 +37,7 @@ resource "openstack_compute_instance_v2" "vpn-2" {
 	network {
 		port = "${openstack_networking_port_v2.port_vpn_2.id}"
 	}
+	user_data = file("cloud-init")
 	metadata = {
 		"instance_name_tag" = "vpn-2"
 	}
