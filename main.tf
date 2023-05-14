@@ -38,7 +38,7 @@ resource "openstack_compute_instance_v2" "vpn-2" {
 	flavor_id       = "ab7b9b6d-108c-4487-90a4-2da604ad6a92"
 	security_groups = ["default"]
 	network {
-		port = "{openstack_networking_portv2.port_vpn_2.id}"
+		port = "${openstack_networking_portv2.port_vpn_2.id}"
 	}
 	metadata = {
 		"instance_name_tag" = "vpn-2"
@@ -52,7 +52,7 @@ resource "openstack_networking_network_v2" "network_vpn_2" {
 
 resource "openstack_networking_port_v2" "port_vpn_2" {
 	name       = "port_vpn_2"
-	network_id = "{openstack_networking_network_v2.network_vpn_2.id}"
+	network_id = "${openstack_networking_network_v2.network_vpn_2.id}"
   admin_state_up = "true"
 	security_group_ids = [
 		"4815010e-def7-4c61-85a2-a4ae68d4c158",  # default
