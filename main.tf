@@ -7,9 +7,6 @@ required_version = ">= 0.14.0"
       version = "~> 1.48.0"
     }
   }
-	backend "local" {
-		path = "sv-vRUB8tJo9gQ9rSut.tfstate"
-	}
 }
 
 # openstack provider
