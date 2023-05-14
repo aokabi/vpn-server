@@ -1,0 +1,8 @@
+#cloud-config
+
+users:
+	- name: aokabi
+		ssh_import_id: gh:aokabi
+		ssh_pwauth: no
+		sudo: ALL=(ALL) NOPASSWD:ALL
+
