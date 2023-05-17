@@ -30,12 +30,9 @@ provider "openstack" {
 
 # openstack instance
 resource "openstack_compute_instance_v2" "vpn-2" {
-	name            = "118-27-104-234"
+	name            = "160-251-75-213"
 	image_id        = "e0e17ed7-d1a9-44af-9d20-9931521b05f3" # ubuntu
 	flavor_id       = "ab7b9b6d-108c-4487-90a4-2da604ad6a92"
-	network {
-		port = "${openstack_networking_port_v2.port_vpn_2.id}"
-	}
 	user_data = file("cloud-init")
 	metadata = {
 		"instance_name_tag" = "vpn-2"
@@ -55,4 +52,9 @@ resource "openstack_networking_port_v2" "port_vpn_2" {
 		"4815010e-def7-4c61-85a2-a4ae68d4c158",  # default
 		"3cde2a8e-85c2-4a09-b2bd-016939f073c4"  # gncs-ipv4-ssh
 		]
+}
+
+resource "openstack_networking_attach_v2" "attach_vpn_2" {
+	instance_id = "${openstack_compute_instance_v2.vpn-2.id}"
+	port_id = "${openstack_networking_port_v2.port_vpn_2.id}"	
 }
