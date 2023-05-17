@@ -30,7 +30,7 @@ provider "openstack" {
 
 # openstack instance
 resource "openstack_compute_instance_v2" "vpn-2" {
-	name            = "160-251-103-78"
+	name            = "118-27-104-234"
 	image_id        = "e0e17ed7-d1a9-44af-9d20-9931521b05f3" # ubuntu
 	flavor_id       = "ab7b9b6d-108c-4487-90a4-2da604ad6a92"
 	network {
