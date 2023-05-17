@@ -54,7 +54,7 @@ resource "openstack_networking_port_v2" "port_vpn_2" {
 		]
 }
 
-resource "openstack_networking_attach_v2" "attach_vpn_2" {
+resource "openstack_compute_interface_attach_v2" "attach_vpn_2" {
 	instance_id = "${openstack_compute_instance_v2.vpn-2.id}"
 	port_id = "${openstack_networking_port_v2.port_vpn_2.id}"	
 }
